@@ -9,11 +9,19 @@
                     <sheet>
                         <group>
                             <field name="name"/>
-							<field name="responsible_id"/>
+                            <field name="responsible_id"/>
                         </group>
-						<notebook>
+                        <notebook>
                             <page string="Description">
                                 <field name="description"/>
+                            </page>
+                            <page string="Sessions">
+                                <field name="session_ids">
+                                    <tree string="Registered sessions">
+                                        <field name="name"/>
+                                        <field name="instructor_id"/>
+                                    </tree>
+                                </field>
                             </page>
                             <page string="About">
                                 This is an example of notebooks
@@ -23,7 +31,7 @@
                 </form>
             </field>
         </record>
-		
+
 		<!--this block added-->
 		<!-- override the automatically generated list view for courses -->
         <record model="ir.ui.view" id="course_tree_view">
@@ -36,7 +44,7 @@
                 </tree>
             </field>
         </record>
-	
+
         <!-- window action -->
         <!--
             The following tag is an action definition for a "window action",
