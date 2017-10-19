@@ -19,7 +19,7 @@
                                 <field name="session_ids">
                                     <tree string="Registered sessions">
                                         <field name="name"/>
-                                        <field name="instructor_id"/>
+                                        <field name="responsible_id"/>
                                     </tree>
                                 </field>
                             </page>
@@ -32,7 +32,6 @@
             </field>
         </record>
 
-		<!--this block added-->
 		<!-- override the automatically generated list view for courses -->
         <record model="ir.ui.view" id="course_tree_view">
             <field name="name">course.tree</field>
