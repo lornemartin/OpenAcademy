@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
+        <record model="ir.ui.view" id="course_form_view">
+            <field name="name">course.form</field>
+            <field name="model">openacademy.course</field>
+            <field name="arch" type="xml">
+                <form string="Course Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <notebook>
+                            <page string="Description">
+                                <field name="description"/>
+                            </page>
+                            <page string="About">
+                                <field name="notes"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
         <!-- window action -->
         <!--
             The following tag is an action definition for a "window action",
@@ -31,8 +53,8 @@
         <!-- Full id location:
              action="openacademy.course_list_action"
              It is not required when it is the same module -->
-		
-		<!-- session form view -->
+        
+        <!-- session form view -->
         <record model="ir.ui.view" id="session_form_view">
             <field name="name">session.form</field>
             <field name="model">openacademy.session</field>
