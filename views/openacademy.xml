@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-		<record model="ir.ui.view" id="course_form_view">
+        
+        <record model="ir.ui.view" id="course_form_view">
             <field name="name">course.form</field>
             <field name="model">openacademy.course</field>
             <field name="arch" type="xml">
@@ -19,20 +20,18 @@
                                 <field name="session_ids">
                                     <tree string="Registered sessions">
                                         <field name="name"/>
-                                        <field name="responsible_id"/>
+                                        <field name="instructor_id"/>
                                     </tree>
                                 </field>
-                            </page>
-                            <page string="About">
-                                This is an example of notebooks
                             </page>
                         </notebook>
                     </sheet>
                 </form>
             </field>
         </record>
-
-		<!-- override the automatically generated list view for courses -->
+        
+        
+        <!-- override the automatically generated list view for courses -->
         <record model="ir.ui.view" id="course_tree_view">
             <field name="name">course.tree</field>
             <field name="model">openacademy.course</field>
@@ -43,7 +42,7 @@
                 </tree>
             </field>
         </record>
-
+        
         <!-- window action -->
         <!--
             The following tag is an action definition for a "window action",
@@ -74,8 +73,8 @@
         <!-- Full id location:
              action="openacademy.course_list_action"
              It is not required when it is the same module -->
-		
-		<!-- session form view -->
+        
+        <!-- session form view -->
         <record model="ir.ui.view" id="session_form_view">
             <field name="name">session.form</field>
             <field name="model">openacademy.session</field>
@@ -83,7 +82,7 @@
                 <form string="Session Form">
                     <sheet>
                         <group>
-							<group string="General">
+                            <group string="General">
                                 <field name="course_id"/>
                                 <field name="name"/>
                                 <field name="instructor_id"/>
@@ -94,14 +93,14 @@
                                 <field name="seats"/>
                             </group>
                         </group>
-						<label for="attendee_ids"/>
+                        <label for="attendee_ids"/>
                         <field name="attendee_ids"/>
                     </sheet>
                 </form>
             </field>
         </record>
-		
-		<!-- session tree/list view -->
+        
+        <!-- session tree/list view -->
         <record model="ir.ui.view" id="session_tree_view">
             <field name="name">session.tree</field>
             <field name="model">openacademy.session</field>
